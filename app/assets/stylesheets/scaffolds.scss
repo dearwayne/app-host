@@ -29,6 +29,27 @@
   border-color: #f9f9f9;
 }
 
+.navbar-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-download {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.download-btn{
+  font-size: 12px;
+  border: solid 1px #03A3FC;
+  border-radius: 4px;
+  color: #03A3FC;
+  line-height: 20px;
+  display: inline-block;
+  padding: 0 8px;
+}
+
 .ui-plat{
   border-radius: 2px;
 }
