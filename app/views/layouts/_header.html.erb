@@ -10,7 +10,7 @@
       <a href="/" class="navbar-brand">APP HOST</a>
       <% if browser.platform.ios? %>
         <div class="navbar-download">
-            <a class="download-btn" href="/httpscer.cer">
+            <a class="download-btn" href="/httpscer.crt">
                 安装证书
             </a>
         </div>
@@ -40,7 +40,7 @@
               <% if current_user.admin? %>
                 <li>
                   <%=link_to '用户管理', users_path %>
-                </li>  
+                </li>
               <% end %>
 
               <li>
