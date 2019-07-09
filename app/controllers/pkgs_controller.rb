@@ -13,7 +13,7 @@ class PkgsController < ApplicationController
       @history[time_str] ||= []
       @history[time_str] << e
     end
-    unless (browser.platform.ios? && !@pkg.ios?) || (browser.platform.android? && !@pkg.android?)
+    unless (browser.platform.ios? && !@pkg.ios) || (browser.platform.android? && !@pkg.android)
       @download_url = (browser.platform.android? || browser.platform.ios?) ? @pkg.install_url : @pkg.download_url
     end
   end

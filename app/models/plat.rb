@@ -28,10 +28,10 @@ class Plat < ApplicationRecord
 
   validates_presence_of :user_id
 
-  enum plat_name: {
-    ios: 'ios',
-    android: 'android'
-  }
+  # enum plat_name: {
+  #   ios: 'ios',
+  #   android: 'android'
+  # }
 
 
   def bundle_id_reg

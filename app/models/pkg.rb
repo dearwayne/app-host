@@ -37,10 +37,10 @@ class Pkg < ApplicationRecord
   mount_uploader :icon, IconUploader
   mount_uploader :file, PkgUploader
 
-  enum plat_name: {
-    ios: 'ios',
-    android: 'android'
-  }
+  # enum plat_name: {
+  #   ios: 'ios',
+  #   android: 'android'
+  # }
 
   after_create :save_icon
 
@@ -85,8 +85,16 @@ class Pkg < ApplicationRecord
     @ext_info ||= parser.ext_info
   end
 
+  def ios
+    self.plat_name == 'ios'
+  end
+
+  def android?
+    self.plat_name == 'android'
+  end
+
   def install_url
-    if ios?
+    if self.plat_name == 'ios'
       "itms-services://?action=download-manifest&url=#{Settings.PROTOCOL}#{Settings.HOST}#{Rails.application.routes.url_helpers.manifest_pkg_path(self)}.plist"    
     else
       download_url
