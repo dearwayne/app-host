@@ -89,7 +89,7 @@ class Pkg < ApplicationRecord
     self.plat_name == 'ios'
   end
 
-  def android?
+  def android
     self.plat_name == 'android'
   end
 
