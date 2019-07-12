@@ -19,7 +19,7 @@ module PkgAdapter
     end
 
     def app_version
-      "1.0.0"
+      ""
     end
 
     def app_build
